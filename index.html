@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hava Durumu Widget</title>
+    <title>Weather Widget</title>
 </head>
 <body>
-    <div id="openweathermap-widget-11"></div>
-    <script src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+    <div id="openweathermap-widget-15"></div>
     <script>
-        window.myWidgetParam = window.myWidgetParam || [];
+        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  
         window.myWidgetParam.push({
-            id: 11,
+            id: 15,
             cityid: '315368',
             appid: '5f50ead78a9495a24fe50acf3515a679',
             units: 'metric',
-            containerid: 'openweathermap-widget-11',
-        });
+            containerid: 'openweathermap-widget-15',
+        });  
         (function() {
             var script = document.createElement('script');
             script.async = true;
             script.charset = "utf-8";
-            script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
             var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(script, s);
+            s.parentNode.insertBefore(script, s);  
         })();
     </script>
 </body>
